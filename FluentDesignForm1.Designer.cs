@@ -29,39 +29,15 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
-            accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
-            accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(components);
-            ((System.ComponentModel.ISupportInitialize)accordionControl1).BeginInit();
+            layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            Root = new DevExpress.XtraLayout.LayoutControlGroup();
             ((System.ComponentModel.ISupportInitialize)fluentDesignFormControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fluentFormDefaultManager1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControl1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Root).BeginInit();
             SuspendLayout();
-            // 
-            // fluentDesignFormContainer1
-            // 
-            fluentDesignFormContainer1.Dock = DockStyle.Fill;
-            fluentDesignFormContainer1.Location = new Point(260, 31);
-            fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            fluentDesignFormContainer1.Size = new Size(431, 442);
-            fluentDesignFormContainer1.TabIndex = 0;
-            // 
-            // accordionControl1
-            // 
-            accordionControl1.Dock = DockStyle.Left;
-            accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { accordionControlElement1 });
-            accordionControl1.Location = new Point(0, 31);
-            accordionControl1.Name = "accordionControl1";
-            accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            accordionControl1.Size = new Size(260, 442);
-            accordionControl1.TabIndex = 1;
-            accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
-            // 
-            // accordionControlElement1
-            // 
-            accordionControlElement1.Name = "accordionControlElement1";
-            accordionControlElement1.Text = "Element1";
             // 
             // fluentDesignFormControl1
             // 
@@ -77,30 +53,44 @@
             // 
             fluentFormDefaultManager1.Form = this;
             // 
+            // layoutControl1
+            // 
+            layoutControl1.Dock = DockStyle.Fill;
+            layoutControl1.Location = new Point(0, 31);
+            layoutControl1.Name = "layoutControl1";
+            layoutControl1.Root = Root;
+            layoutControl1.Size = new Size(691, 442);
+            layoutControl1.TabIndex = 3;
+            // 
+            // Root
+            // 
+            Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            Root.GroupBordersVisible = false;
+            Root.Name = "Root";
+            Root.Size = new Size(691, 442);
+            Root.TextVisible = false;
+            // 
             // FluentDesignForm1
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(691, 473);
-            ControlContainer = fluentDesignFormContainer1;
-            Controls.Add(fluentDesignFormContainer1);
-            Controls.Add(accordionControl1);
+            Controls.Add(layoutControl1);
             Controls.Add(fluentDesignFormControl1);
             FluentDesignFormControl = fluentDesignFormControl1;
             Name = "FluentDesignForm1";
-            NavigationControl = accordionControl1;
             Text = "FluentDesignForm1";
-            ((System.ComponentModel.ISupportInitialize)accordionControl1).EndInit();
             ((System.ComponentModel.ISupportInitialize)fluentDesignFormControl1).EndInit();
             ((System.ComponentModel.ISupportInitialize)fluentFormDefaultManager1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControl1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Root).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fluentDesignFormContainer1;
-        private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
         private DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager fluentFormDefaultManager1;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
     }
 }
