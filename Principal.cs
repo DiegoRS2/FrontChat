@@ -1,6 +1,5 @@
-﻿using DevExpress.XtraBars;
+﻿using DevExpress.XtraEditors;
 using Microsoft.AspNetCore.SignalR.Client;
-using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,30 +7,22 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FrontChat
 {
-    public partial class FluentDesignForm1 : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
+    public partial class Principal : DevExpress.XtraEditors.XtraForm
     {
         const string hubAddress = "https://localhost:7065/chathub";
 
         public HubConnection Connection { get; set; }
-        public FluentDesignForm1()
+        public Principal()
         {
             InitializeComponent();
             Connection = new HubConnectionBuilder().WithUrl(hubAddress).Build();
 
             Connection.Closed += HubConnection_Closed;
-
-            gridControl1.DataSource = new List<Contato>()
-            {
-                new Contato(1, "Diego"),
-                new Contato(2, "Gabriel"),
-                new Contato(2, "GiovaniPietro")
-            };
-
-
         }
 
         private async Task HubConnection_Closed(Exception? arg)
@@ -40,7 +31,7 @@ namespace FrontChat
             await Connection.StartAsync();
         }
 
-        private async void FluentDesignForm1_Load(object sender, EventArgs e)
+        private async void Principal_Load(object sender, EventArgs e)
         {
             Connection.On<string, string>("ReceiveMessage", (user, message) =>
             {
@@ -60,7 +51,7 @@ namespace FrontChat
             }
         }
 
-        private async void btnEnviar_Click(object sender, EventArgs e)
+        private async void simpleButton1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -70,6 +61,7 @@ namespace FrontChat
             {
                 //listBox1.Items.Add(ex.Message);
             }
+
         }
     }
 }
